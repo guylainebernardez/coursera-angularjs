@@ -1,0 +1,21 @@
+<ul>
+  <li ng-repeat="item in menu.foundItems">
+    <div class="row">
+      <div class="col-sm-4">
+      <b><h3>{{ item.name }}</h3></b>
+      </div>
+      <div class="col-sm-2">
+      <h5>( {{ item.short_name }} )</h5>
+      </div>
+      <div class="col-sm-6">
+      <i>{{ item.description }}</i>
+
+      </div>
+      <div class="dontWant">
+        <button class="btn btn-default btn-warning" ng-click="menu.onRemove({index: $index});"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Don't want this one!</button>
+      </div>
+    </div>
+  </li>
+</ul>
+<div class="alert alert-danger well-lg nothingFound" role="alert" ng-show="menu.onEmpty"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  <span class="text">{{menu.onEmpty}}</span></div>

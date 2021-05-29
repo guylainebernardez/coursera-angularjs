@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" ng-app="NarrowItDownApp">
+  <head>
+    <title>Narrow Down Your Menu Choice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  </head>
+<body>
+   <div class="container" ng-controller="NarrowItDownController as menu">
+    <h1>Narrow Down Your Chinese Menu Choice</h1>
+
+    <div class="input-group">
+      <input type="text" ng-model="menu.searchTerm" placeholder="search term" class="form-control input-lg">
+      <span class="input-group-btn">
+        <button class="btn btn-primary btn-lg" ng-click="menu.addSearchTerm(menu.searchTerm);">Narrow It Down For Me!</button>
+      </span>
+    </div><!-- /input-group -->
+
+    <div class="menu-list">
+      <found-items found-items="menu.found" on-remove="menu.removeMenuItem(index)" on-empty="menu.message"></found-items>
+    </div>
+  </div>
+
+</body>
+</html>

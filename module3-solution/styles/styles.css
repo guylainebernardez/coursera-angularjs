@@ -1,0 +1,107 @@
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+h5 {
+  font-weight: bold;
+  color: gray;
+}
+
+input[type="text"] {
+  width: 200px;
+  float: left;
+  align-items: center;
+}
+
+.narrow-button {
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 40px;
+}
+
+.menu-list {
+  clear:both;
+  margin-top: 40px;
+}
+
+.menu-list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.menu-list li {
+  border: 2px solid #dfdfdf;
+  background-color: #eee;
+  padding: 15px;
+  text-align: center;
+  line-height: 25px;
+  margin: 40px 0px;
+  border-radius: 8px;
+}
+
+.nothingFound {
+  margin-top: 20px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.nothingFound .text {
+  margin-left: 5px;
+}
+
+.dontWant {
+  clear:both;
+  padding-top: 20px;
+}
+
+.loader {
+  display: none;
+  margin-left: 5px;
+  font-size: 10px;
+  float: left;
+  border-top: 1.1em solid rgba(147, 147, 147, 0.2);
+  border-right: 1.1em solid rgba(147, 147, 147, 0.2);
+  border-bottom: 1.1em solid rgba(147, 147, 147, 0.2);
+  border-left: 1.1em solid #676767;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
