@@ -1,0 +1,132 @@
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.title {
+  text-align: center;
+}
+
+.row h1 {
+  font-size: 3em;
+}
+
+.row h2 {
+  font-weight: bold;
+  padding: 10px;
+}
+
+.row {
+  margin-top: 0px;
+  background-color: #BAE5E3;
+  border-radius: 0 5px 5px 5px;
+  padding: 25px 25px 35px 25px;
+  text-align: center;
+}
+
+.nav {
+  margin-left: -15px;
+}
+
+.nav-item {
+  background-color: #BAE5E3;
+  margin-right: 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.btn {
+  border-radius: 5px 5px 0 0;
+}
+
+.active {
+  background-color: #BAE5E3;
+}
+
+.btn.active, .btn:active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset -2px 2px 3px rgb(0 0 0 / 20%);
+    box-shadow: inset -2px 2px 3px rgb(0 0 0 / 20%);
+}
+
+.breadcrumbs {
+  text-align: left;
+  word-spacing: 20px;
+}
+
+.breadcrumbs a {
+  color: #2F5B58;
+}
+
+.breadcrumbs span {
+  font-weight: bold;
+}
+
+.category {
+  background-color: #fff;
+}
+
+.category li {
+  list-style-type:none;
+  float:left;
+  margin: 10px;
+}
+
+.category li[ui-sref] {
+  font-size: 1.2em;
+  display: block;
+  background-color: white;
+  color: #000;
+  text-align: center;
+  padding: 16px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.itemlist {
+  background-color: #fff;
+}
+
+.theaditems {
+  background-color: #000;
+  color: #fff;
+}
+
+th {
+  text-align: center;
+}
+
+tr {
+  border-bottom: 2px solid #000;
+}
+
+td {
+  padding: 25px;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  padding: 25px;
+  font-size: 1.1em;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+.loading-icon {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+}
+
+li[ui-sref]:hover {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
