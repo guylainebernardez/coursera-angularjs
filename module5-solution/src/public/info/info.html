@@ -1,0 +1,50 @@
+<div class="container">
+
+  <div class="menu-item-tile col-md-12" ng-if="myInfoCtrl.user.firstname">
+  <h2 id="menu-categories-title" class="text-center">My Information</h2>
+
+    <table class="table-borderless info">
+      <tbody>
+        <tr class="trstyle">
+          <th scope="row">First Name:</th>
+          <td>{{ myInfoCtrl.user.firstname }}</td>
+        </tr>
+        <tr class="trstyle">
+          <th scope="row">Last Name:</th>
+          <td>{{ myInfoCtrl.user.lastname }}</td>
+        </tr>
+        <tr class="trstyle">
+          <th scope="row">Email:</th>
+          <td>{{ myInfoCtrl.user.email }}</td>
+        </tr>
+        <tr class="trstyle">
+          <th scope="row">Phone:</th>
+          <td>{{ myInfoCtrl.user.phone }}</td>
+        </tr>
+        <tr class="trstyle">
+          <th scope="row">Favorite Dish:</th>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="menu-item-photo">
+          <div>{{myInfoCtrl.user.favDishDetails.short_name}}</div>
+          <img class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.user.favDishDetails.short_name}}.jpg" alt="{{myInfoCtrl.user.favDishDetails.name}}">
+        </div>
+        <div class="menu-item-price">{{myInfoCtrl.user.favDishDetails.price_small | currency}}<span> {{myInfoCtrl.user.favDishDetails.small_portion_name}}</span> {{myInfoCtrl.user.favDishDetails.price_large | currency}} <span>{{myInfoCtrl.user.favDishDetails.large_portion_name}}</span></div>
+      </div>
+      <div class="menu-item-description col-sm-7">
+        <h3 class="menu-item-title">{{myInfoCtrl.user.favDishDetails.name}}</h3>
+        <p class="menu-item-details">{{myInfoCtrl.user.favDishDetails.description}}</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="menu-item-tile col-md-12 notsigned" ng-if="!myInfoCtrl.user.firstname">
+  Not Signed Up Yet. <div><button  class="btn btn-warning btn-lg" ui-sref="public.signup">Sign Up Now!</button></div>
+  </div>
+
+</div>

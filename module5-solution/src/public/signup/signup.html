@@ -1,0 +1,111 @@
+<div class="container formstyle">
+  <h2 id="menu-categories-title" class="text-center">Sign Up</h2>
+
+  <div class="form">
+    <form name='regForm' novalidate>
+
+    <p><mark>* required fields</mark></p>
+    <br>
+    <label>First Name: *</label>
+    <input class="form-group form-control input-lg" type="text" name="firstname" placeholder="John"
+      ng-model="signUpCtrl.user.firstname"
+      pattern="[A-Za-z]+"
+      required>
+      <p class="alert alert-danger"
+        ng-if="regForm.firstname.$error.required && regForm.firstname.$touched">
+        First name is required.
+      </p>
+      <p class="alert alert-danger"
+        ng-if="regForm.firstname.$invalid && regForm.firstname.$touched">
+        First name must consist of letters only.
+      </p>
+    <p class="" style="margin: 40px;"></p>
+
+    <label>Last Name: *</label>
+    <input class="form-group form-control input-lg" type="text" name="lastname" placeholder="Doe"
+      ng-model="signUpCtrl.user.lastname"
+      pattern="[A-Za-z]+"
+      required>
+      <p class="alert alert-danger"
+        ng-if="regForm.lastname.$error.required && regForm.lastname.$touched">
+        Last name is required.
+      </p>
+      <p class="alert alert-danger"
+        ng-if="regForm.lastname.$invalid && regForm.lastname.$touched">
+        Last name must consist of letters only.
+      </p>
+    <p class="" style="margin: 40px;"></p>
+
+    <label>Email Address: *</label>
+    <input class="form-group form-control input-lg" type="email" name="email" placeholder="johndoe@email.com"
+      ng-model="signUpCtrl.user.email"
+      required>
+      <p class="alert alert-danger"
+        ng-if="regForm.email.$error.required && regForm.email.$touched">
+        Email address is required.
+      </p>
+      <p class="alert alert-danger"
+        ng-if="regForm.email.$invalid && regForm.email.$touched">
+        Must be a valid email address: handle@domain format
+      </p>
+    <p class="" style="margin: 40px;"></p>
+
+    <label>Phone Number: *</label>
+    <input class="form-group form-control input-lg" type="text" name="phone" placeholder="###-###-####"
+      ng-model="signUpCtrl.user.phone"
+      pattern="(\d{3})-(\d{3})-(\d{4})"
+      required>
+      <p class="alert alert-danger"
+        ng-if="regForm.phone.$error.required && regForm.phone.$touched">
+        Phone number is required.
+      </p>
+      <p class="alert alert-danger"
+        ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+        Phone must be in the format ###-###-####.
+      </p>
+    <p class="" style="margin: 40px;"></p>
+
+    <label>Favorite Dish: </label>
+    <input class="form-group form-control input-lg" type="text" name="favDish" placeholder="L1"
+      ng-model="signUpCtrl.user.favDish"
+      pattern="[A-Z]{1,2}\d{1,2}\b">
+      <p class="alert alert-danger"
+        ng-if="regForm.favDish.$invalid && regForm.favDish.$touched">
+        Favorite dish must be in the format AA##. (At most two UPPERCASE letter and at most two digits).
+      </p>
+      <p class="alert alert-danger"
+        ng-show="signUpCtrl.showError">
+        No such menu number exists.
+      </p>
+    <p class="" style="margin: 40px;"></p>
+
+    <div class="submit">
+    <button class="btn submit btn-light btn-lg"
+      ng-disabled="regForm.$invalid"
+      ng-click="signUpCtrl.submit()">Submit</button>
+    </div>
+
+    <div class="submit alert alert-danger" style="margin-top: 10px;"
+      ng-show="regForm.$invalid">
+      Please validate form contents to be able to submit.
+    </div>
+
+    <p class="" style="margin: 40px;"></p>
+
+      <p class="alert alert-success"
+        ng-show="signUpCtrl.showMessage"
+        style="text-align:center; font-weight: bold;">
+        <span class="glyphicon glyphicon-ok" style="color:black" aria-hidden="true"></span>
+        Your information has been saved.
+      </p>
+
+      <p class="alert alert-danger"
+        ng-show="signUpCtrl.showError"
+        style="text-align:center; font-weight: bold;"">
+        <span class="glyphicon glyphicon-remove" style="color:black" aria-hidden="true"></span>
+        Your information was not submitted.
+      </p>
+
+    </div>
+
+</div>
